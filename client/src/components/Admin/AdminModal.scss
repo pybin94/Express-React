@@ -1,0 +1,28 @@
+.AdminModal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #d1cfcf61;
+
+    &__contents-box{
+        position: fixed;
+        top: 20%;
+        left: 50%;
+        transform: translate(-50%);
+        border: 1px solid #d2d2d2;
+        padding: 30px;
+        border-radius: 10px;
+        background-color: #fff;
+
+        .btn-wrap{
+            cursor: pointer;
+
+            div:hover {
+                color: rgb(207, 68, 68);
+            }
+        }
+    }
+
+}

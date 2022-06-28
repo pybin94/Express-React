@@ -1,0 +1,11 @@
+22/06/23 19:12:54.642 [error] pool 임대에 실패했습니다.
+22/06/23 19:12:54.643 [error] connect ECONNREFUSED 127.0.0.1:3306
+22/06/23 19:15:55.808 [error] pool 임대에 실패했습니다.
+22/06/23 19:15:55.809 [error] connect ECONNREFUSED 127.0.0.1:3306
+22/06/23 19:18:13.652 [error] pool 임대에 실패했습니다.
+22/06/23 19:18:13.654 [error] connect ECONNREFUSED 127.0.0.1:3306
+22/06/23 19:18:48.838 [error] pool 임대에 실패했습니다.
+22/06/23 19:18:48.839 [error] connect ECONNREFUSED 127.0.0.1:3306
+22/06/23 19:22:56.154 [error] pool 임대에 실패했습니다.
+22/06/23 19:22:56.156 [error] connect ECONNREFUSED 127.0.0.1:3306
+22/06/23 11:19:33.768 [error] Login TypeError: Cannot read properties of undefined (reading 'user_id')

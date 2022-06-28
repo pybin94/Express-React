@@ -1,0 +1,32 @@
+
+header {
+    padding: 20px 0;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #e2e2e2;
+
+    div {
+        display: flex;
+    }
+
+    .head-logo {
+        width: 50%;
+        font-size: 25px;
+        justify-content: center;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    .head-btn-left {
+        width: 25%;
+        justify-content: start;
+    }
+
+    .head-btn-right {
+        width: 25%;
+        justify-content: end;
+    }
+}

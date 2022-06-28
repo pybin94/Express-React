@@ -1,0 +1,102 @@
+22/06/27 02:41:39.731 [info] server address => http://172.31.20.82:80
+22/06/27 02:41:39.762 [debug] ====Database Connected====
+22/06/27 04:15:52.304 [info] server address => http://172.31.20.82:80
+22/06/27 04:15:52.347 [debug] ====Database Connected====
+22/06/27 04:17:15.428 [info] server address => http://172.31.20.82:80
+22/06/27 04:17:15.471 [debug] ====Database Connected====
+22/06/27 04:19:19.839 [info] server address => http://172.31.20.82:80
+22/06/27 04:19:19.882 [debug] ====Database Connected====
+22/06/27 04:22:00.889 [info] server address => http://172.31.20.82:80
+22/06/27 04:22:00.931 [debug] ====Database Connected====
+22/06/27 05:08:43.398 [info] server address => http://172.31.20.82:80
+22/06/27 05:08:43.443 [debug] ====Database Connected====
+22/06/27 05:13:07.969 [info] server address => http://172.31.20.82:80
+22/06/27 05:13:08.013 [debug] ====Database Connected====
+22/06/27 06:11:10.649 [info] server address => http://172.31.20.82:80
+22/06/27 06:11:10.693 [debug] ====Database Connected====
+22/06/27 07:29:13.364 [info] server address => http://172.31.20.82:80
+22/06/27 07:29:13.408 [debug] ====Database Connected====
+22/06/27 07:36:42.592 [error] Login Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '?' at line 1
+22/06/27 07:36:42.674 [error] Login Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '?' at line 1
+22/06/27 07:39:36.265 [info] server address => http://172.31.20.82:80
+22/06/27 07:39:36.309 [debug] ====Database Connected====
+22/06/27 07:39:38.725 [error] Login Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client
+22/06/27 07:39:38.868 [error] Login Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client
+22/06/27 07:39:40.351 [error] Login Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client
+22/06/27 07:39:40.493 [error] Login Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client
+22/06/27 07:39:41.639 [error] Login Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client
+22/06/27 07:39:41.787 [error] Login Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client
+22/06/27 07:39:43.004 [error] Login Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client
+22/06/27 07:39:43.143 [error] Login Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client
+22/06/27 07:40:01.534 [error] Login Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client
+22/06/27 07:40:01.679 [error] Login Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client
+22/06/27 07:41:53.056 [info] server address => http://172.31.20.82:80
+22/06/27 07:41:53.099 [debug] ====Database Connected====
+22/06/27 07:41:56.947 [error] Login Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client
+22/06/27 07:41:57.096 [error] Login Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client
+22/06/27 07:41:57.984 [error] Login Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client
+22/06/27 07:41:58.127 [error] Login Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client
+22/06/27 07:51:00.540 [info] server address => http://172.31.20.82:80
+22/06/27 07:51:00.583 [debug] ====Database Connected====
+22/06/27 07:52:34.362 [info] server address => http://172.31.20.82:80
+22/06/27 07:52:34.405 [debug] ====Database Connected====
+22/06/27 07:53:07.759 [error] Login Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'user WHERE user_id = '123'' at line 1
+22/06/27 08:00:26.367 [error] Login Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client
+22/06/27 08:01:12.551 [error] Login Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client
+22/06/27 08:01:16.484 [info] server address => http://172.31.20.82:80
+22/06/27 08:01:16.527 [debug] ====Database Connected====
+22/06/27 08:01:17.295 [error] Login Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client
+22/06/27 08:02:41.069 [info] server address => http://172.31.20.82:80
+22/06/27 08:02:41.113 [debug] ====Database Connected====
+22/06/27 08:02:44.604 [error] Login Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client
+22/06/27 08:05:01.677 [info] server address => http://172.31.20.82:80
+22/06/27 08:05:01.724 [debug] ====Database Connected====
+22/06/27 08:05:02.737 [error] Login Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client
+22/06/27 08:05:59.397 [info] server address => http://172.31.20.82:80
+22/06/27 08:05:59.441 [debug] ====Database Connected====
+22/06/27 08:06:00.218 [error] Login Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client
+22/06/27 08:07:19.282 [info] server address => http://172.31.20.82:80
+22/06/27 08:07:19.327 [debug] ====Database Connected====
+22/06/27 08:07:33.457 [info] server address => http://172.31.20.82:80
+22/06/27 08:07:33.502 [debug] ====Database Connected====
+22/06/27 08:08:00.572 [info] server address => http://172.31.20.82:80
+22/06/27 08:08:00.617 [debug] ====Database Connected====
+22/06/27 08:08:23.043 [info] server address => http://172.31.20.82:80
+22/06/27 08:08:23.086 [debug] ====Database Connected====
+22/06/27 08:08:48.516 [info] server address => http://172.31.20.82:80
+22/06/27 08:08:48.559 [debug] ====Database Connected====
+22/06/27 08:58:46.399 [info] server address => http://172.31.20.82:80
+22/06/27 08:58:46.443 [debug] ====Database Connected====
+22/06/27 09:01:58.057 [info] server address => http://172.31.20.82:80
+22/06/27 09:01:58.102 [debug] ====Database Connected====
+22/06/27 09:07:46.987 [error] Login Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'user WHERE user_id = '123'' at line 1
+22/06/27 09:08:05.817 [error] Login Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'user WHERE user_id = '1234'' at line 1
+22/06/27 09:09:05.735 [info] server address => http://172.31.20.82:80
+22/06/27 09:09:05.779 [debug] ====Database Connected====
+22/06/27 09:09:10.662 [error] Login Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'user WHERE user_id = '123'' at line 1
+22/06/27 09:09:57.769 [info] server address => http://172.31.20.82:80
+22/06/27 09:09:57.814 [debug] ====Database Connected====
+22/06/27 09:10:03.610 [error] Login Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'user WHERE user_id = '1123'' at line 1
+22/06/27 09:10:38.700 [info] server address => http://172.31.20.82:80
+22/06/27 09:10:38.744 [debug] ====Database Connected====
+22/06/27 09:10:42.201 [error] Login Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'user WHERE user_id = '123'' at line 1
+22/06/27 09:11:46.275 [info] server address => http://172.31.20.82:80
+22/06/27 09:11:46.318 [debug] ====Database Connected====
+22/06/27 09:13:58.799 [info] server address => http://172.31.20.82:80
+22/06/27 09:13:58.844 [debug] ====Database Connected====
+22/06/27 09:28:11.149 [info] server address => http://172.31.20.82:80
+22/06/27 09:28:11.194 [debug] ====Database Connected====
+22/06/27 09:32:14.852 [info] server address => http://172.31.20.82:80
+22/06/27 09:32:14.894 [debug] ====Database Connected====
+22/06/27 09:32:16.592 [error] Login ReferenceError: dbcon is not defined
+22/06/27 09:34:42.267 [info] server address => http://172.31.20.82:80
+22/06/27 09:34:42.310 [debug] ====Database Connected====
+22/06/27 09:34:48.858 [error] Login ReferenceError: dbcon is not defined
+22/06/27 09:35:17.477 [info] server address => http://172.31.20.82:80
+22/06/27 09:35:17.520 [debug] ====Database Connected====
+22/06/27 11:50:40.034 [info] server address => http://172.31.20.82:80
+22/06/27 11:50:40.080 [debug] ====Database Connected====
+22/06/27 13:22:37.012 [info] server address => http://172.31.20.82:80
+22/06/27 13:22:37.055 [debug] ====Database Connected====
+22/06/27 13:31:20.833 [info] server address => http://172.31.20.82:80
+22/06/27 13:31:20.875 [debug] ====Database Connected====
