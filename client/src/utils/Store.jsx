@@ -10,6 +10,26 @@ const useStore = create(set => ({
         set((state) => { state.users = array })
     },
 
+    userId: "",
+    setUserId: (data) => {
+        set((state) => ({ hasCookie: state.userId = data }))
+    },
+
+    userPw: "",
+    setUserPw: (data) => {
+        set((state) => ({ hasCookie: state.userPw = data }))
+    },
+
+    userPwCheck: "",
+    setUserPwCheck: (data) => {
+        set((state) => ({ hasCookie: state.userPwCheck = data }))
+    },
+
+    userName: "",
+    setUserName: (data) => {
+        set((state) => ({ hasCookie: state.userName = data }))
+    },
+
     userIndex: "",
     setUserIndex: (index) => {
         set((state) => ({ hasCookie: state.userIndex = index }))

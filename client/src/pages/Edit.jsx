@@ -2,24 +2,19 @@ import React, { useState, useRef } from 'react';
 import { useEffect } from 'react';
 import MyHeader from "../components/MyHeader"
 import MyButton from "../components/MyButton"
+import EditForm from "../components/Edit/EditForm"
 import { useNavigate } from "react-router-dom";
 import useStore from "../utils/Store";
 import "./Edit.scss";
 
 const Edit = () => {
 
-    const { userIndex } = useStore()
-
+    const { userId, setUserId, userName, setUserName,  userIndex } = useStore()
 
     const navigate = useNavigate()
 
-    const [userId, setUserId] = useState("");
-    const [userName, setUserName] = useState("");
     const idInput = useRef();
     const nameInput = useRef();
-
-    let url = window.location.href
-    let parseUrl = url.split("/")
 
     const reset = () => {
         idInput.current.focus();
@@ -105,26 +100,11 @@ const Edit = () => {
                     />
                 }
             />
-            <div className="w15 m0-auto">
-                id:<input 
-                    type="text" 
-                    onChange={(e) => {
-                        setUserId(e.target.value)
-                    }}
-                    onKeyPress={handleOnKeyPress}
-                    value={userId}
-                    ref={idInput}
-                />
-                name:<input 
-                    type="name" 
-                    onChange={(e) => {
-                        setUserName(e.target.value)
-                    }} 
-                    onKeyPress={handleOnKeyPress}
-                    value={userName}
-                    ref={nameInput}
-                />
-            </div>
+            <EditForm 
+                setKeyPress={handleOnKeyPress}
+                idInput={idInput}
+                nameInput={nameInput}
+            />
         </div>
     )
 };

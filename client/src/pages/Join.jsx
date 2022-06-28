@@ -92,6 +92,12 @@ const Login = () => {
                         onClick={() => {navigate(-1)}} 
                     />
                 }
+                rightChild={
+                    <MyButton 
+                        text={"추가하기"} 
+                        onClick={() => {handleCreate}} 
+                    />
+                }
             />
 
             <div className="w15 m0-auto">
@@ -131,12 +137,6 @@ const Login = () => {
                     value={userName}
                     ref={nameInput}
                 />
-                <button 
-                    type="submit"
-                    onClick={handleCreate}
-                >
-                    추가하기
-                </button>
             </div>
         </div>
     )
