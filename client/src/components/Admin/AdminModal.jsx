@@ -36,7 +36,7 @@ const AdminModal = () => {
                 setDeleteModal(false)
             }
         } catch (error) {
-            alert("[ERROR] 관리자에게 문의주세요.\n"+ error.message);
+            alert("[DELETE USER ERROR] 관리자에게 문의주세요.\n"+ error.message);
         };
     }
     
