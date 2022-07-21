@@ -45,20 +45,4 @@ const logger = winston.createLogger({
     ]
 });
 
-if (process.env.NODE_ENV !== 'production') {
-    logger.add(
-        new winston.transports.Console({
-            prettyPrint: true,
-            showLevel: true,
-            level: config.log.debug.level,
-            format: combine(
-                winston.format.colorize(),
-                printf((info) => {
-                    return `${info.timestamp} [${info.level}]: ${info.message}`;
-                })
-            )
-        })
-    );
-}
-
 export default logger;

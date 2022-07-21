@@ -10,7 +10,7 @@ export default () => {
     router.get("/", getUser)
     router.get("/:id", getPersonalUser)
     router.post("/", postUser)
-    router.put("/:id", putUser)
+    router.patch("/:id", putUser)
     router.delete("/", deleteUser)
 
     return router;

@@ -1,0 +1,11 @@
+22/07/13 18:46:46.225 [error] pool 임대에 실패했습니다.
+22/07/13 18:46:46.227 [error] connect ECONNREFUSED 127.0.0.1:3306
+22/07/13 18:46:54.249 [error] pool 임대에 실패했습니다.
+22/07/13 18:46:54.252 [error] connect ECONNREFUSED 127.0.0.1:3306
+22/07/13 18:47:26.717 [error] pool 임대에 실패했습니다.
+22/07/13 18:47:26.719 [error] connect ECONNREFUSED 127.0.0.1:3306
+22/07/13 18:55:30.247 [error] pool 임대에 실패했습니다.
+22/07/13 18:55:30.250 [error] connect ECONNREFUSED 127.0.0.1:3306
+22/07/13 18:57:27.191 [error] pool 임대에 실패했습니다.
+22/07/13 18:57:27.194 [error] connect ECONNREFUSED 127.0.0.1:3306
+22/07/13 18:57:28.543 [error] Insert Analytics Error Error: connect ECONNREFUSED 127.0.0.1:3306

@@ -75,7 +75,7 @@ export const putUser = async (req, res, next) => {
     if(!req.body.user_name) { return res.status(200).json({status:"fail"}) };
     
     let dbcon = null;
-    const sql = 'UPDATE user SET user_id = ?, user_name = ? WHERE id = ?';
+    const sql = 'UPDATE user SET user_id = ?, user_name =? WHERE id = ?';
     let { id } =  req.params;
     let params = [ req.body.user_id, req.body.user_name, id ];
     try {

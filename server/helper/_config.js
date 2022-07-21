@@ -48,14 +48,12 @@ export default {
     // favicon 경로
     favicon_path: join(__dirname, "/public/favicon.png"),
 
-    // 보안키 (암호화 키)
-    secure: {
-        cookie_encrypt_key: "hmYMtAikWZL#xMr",
-        session_encrypt_key: "md%dg9qg2gwGEFD",
-        // expire : { maxAge : 7200000 }
-    },
-
     // JWT 보안키
     SECRET_KEY: "qnniQzF2Y9oSrUn",
 
+    ids: {
+        batterzone: 271030898,
+        powersoft: 269931426,
+        totoplus: 269503560,
+    },
 };

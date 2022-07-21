@@ -7,7 +7,7 @@ import jwt from 'jsonwebtoken';
 export const postLogin = async (req, res, next) => {
 
     const sql = "SELECT * FROM user WHERE user_id = ?";
-    const YOUR_SECRET_KEY = config.SECRET_KEY;
+    const key = config.SECRET_KEY;
 
     let dbcon = null;
     let params = [req.body.user_id]
@@ -21,12 +21,11 @@ export const postLogin = async (req, res, next) => {
             return res.status(200).json({result:"fail"})
         }
         
-
         const token = jwt.sign({ 
             user_id: result[0].user_id,
             user_name: result[0].user_name,
             user_auth: result[0].user_auth,
-        }, YOUR_SECRET_KEY, {
+        }, key, {
             expiresIn: '12h'
 
         });
@@ -45,5 +44,3 @@ export const postLogin = async (req, res, next) => {
         if(dbcon) { dbcon.release(); }
     }
 }
-
-
