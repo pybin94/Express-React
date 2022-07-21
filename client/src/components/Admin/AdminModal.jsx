@@ -1,13 +1,20 @@
 import useStore from "../../utils/Store";
 import "./AdminModal.scss";
+import { cookies } from "../../utils/Cookie";
+import { url } from "../../utils/_config"
 const AdminModal = () => {
 
     const { userIndex, resetUsers, setUsers, setDeleteModal } = useStore()
+    const api = url("user");
 
     const handelCallApi = async () => {
-
-        const api = "http://13.215.73.68/user";
-        const response = await fetch(api);
+        let option = {
+            method: "GET",
+            headers: {
+                'authorization': cookies
+            },
+        };
+        const response = await fetch(api, option);
         const res = await response.json();
         resetUsers([])
         res.map((v, i) => {
@@ -16,14 +23,14 @@ const AdminModal = () => {
     }
 
     const handelRemove = async (indexId) => {
-        const api = "http://13.215.73.68/user"
         let params = {
             id : indexId
         };
         let option = {
             method: "DELETE",
             headers: {
-                'Content-Type': 'application/json;charset=utf-8'
+                'Content-Type': 'application/json;charset=utf-8',
+                'authorization': cookies.get("token"),
             },
             body: JSON.stringify(params)
         };
@@ -36,13 +43,13 @@ const AdminModal = () => {
                 setDeleteModal(false)
             }
         } catch (error) {
-            alert("[DELETE USER ERROR] 관리자에게 문의주세요.\n"+ error.message);
+            alert("[ERROR] 관리자에게 문의주세요.\n"+ error.message);
         };
     }
     
     return (
-        <div className="AdminModal">
-            <div className="AdminModal__contents-box">
+        <div className="admin-modal">
+            <div className="admin-modal__contents-box">
                 <div className="mb-20">정말 삭제하시겠습니까?</div>
                 <div className="btn-wrap flex jcse">
                     <div onClick={() => { handelRemove(userIndex) }}>확인</div>

@@ -1,10 +1,15 @@
 const AdminListHeader = () => {
+    const headerText = ["아이디", "이름", "생성일", "설정"]
+
     return (
-        <div className="flex jcse tac">
-        <div className="w25">아이디</div>
-        <div className="w25">이름</div>
-        <div className="w25">생성일</div>
-        <div className="w25">설정</div>
+    <div className="flex jcse tac">
+        {
+            headerText.map((v, i) => {
+                return (
+                    <div className="w25" key={i}>{headerText[i]}</div>
+                )
+            })
+        }
     </div>
     )
 }

@@ -1,17 +1,19 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import MyHeader from "../components/MyHeader"
 import MyButton from "../components/MyButton"
+import Auth from "../components/Auth";
+import JoinForm from "../components/Join/JoinForm"
+import useStore from "../utils/Store";
+import { cookies } from "../utils/Cookie";
+import { url } from "../utils/_config";
 import { useNavigate } from "react-router-dom";
 import "./Join.scss";
 
 const Login = () => {
 
     const navigate = useNavigate()
+    const { userId, setUserId, userPw,setUserPw, userPwCheck, setUserPwCheck, userName, setUserName } = useStore()
 
-    const [userId, setUserId] = useState("");
-    const [userPw, setUserPw] = useState("");
-    const [userPwCheck, setUserPwCheck] = useState("");
-    const [userName, setUserName] = useState("");
     const idInput = useRef();
     const pwInput = useRef();
     const pwCheckInput = useRef();
@@ -24,6 +26,10 @@ const Login = () => {
         setUserName("");
         idInput.current.focus();
     };
+
+    useEffect(() => {
+        reset()
+    }, [])
 
     const handleCreate = async () => {    
 
@@ -38,7 +44,7 @@ const Login = () => {
             return alert("비밀번호가 일치하지 않습니다") 
         };
         
-        let api = "http://13.215.73.68/user"
+        let api = url("user")
         let params = {
             user_id : userId,
             user_pw : userPw,
@@ -48,7 +54,8 @@ const Login = () => {
         let option = {
             method: "POST",
             headers: {
-                'Content-Type': 'application/json;charset=utf-8'
+                'Content-Type': 'application/json;charset=utf-8',
+                'authorization': cookies.get("token"),
             },
             body: JSON.stringify(params)
         };
@@ -84,61 +91,31 @@ const Login = () => {
     };
 
     return (
-        <div className="login">
-            <MyHeader 
-                leftChild={
-                    <MyButton 
-                        text={"뒤로가기"} 
-                        onClick={() => {navigate(-1)}} 
-                    />
-                }
-                rightChild={
-                    <MyButton 
-                        text={"추가하기"} 
-                        onClick={() => {handleCreate}} 
-                    />
-                }
-            />
-
-            <div className="w15 m0-auto">
-                id:<input 
-                    type="text" 
-                    onChange={(e) => {
-                        setUserId(e.target.value)
-                    }}
-                    onKeyPress={handleOnKeyPress}
-                    value={userId}
-                    ref={idInput}
+        <Auth>
+            <div className="join">
+                <MyHeader 
+                    leftChild={
+                        <MyButton 
+                            text={"뒤로가기"} 
+                            onClick={() => {navigate(-1)}} 
+                        />
+                    }
+                    rightChild={
+                        <MyButton 
+                            text={"추가하기"} 
+                            onClick={handleCreate} 
+                        />
+                    }
                 />
-                pw:<input 
-                    type="password" 
-                    onChange={(e) => {
-                        setUserPw(e.target.value)
-                    }} 
-                    onKeyPress={handleOnKeyPress}
-                    value={userPw}
-                    ref={pwInput}
-                />
-                pw check:<input 
-                    type="password" 
-                    onChange={(e) => {
-                        setUserPwCheck(e.target.value)
-                    }} 
-                    onKeyPress={handleOnKeyPress}
-                    value={userPwCheck}
-                    ref={pwCheckInput}
-                />
-                name:<input 
-                    type="name" 
-                    onChange={(e) => {
-                        setUserName(e.target.value)
-                    }} 
-                    onKeyPress={handleOnKeyPress}
-                    value={userName}
-                    ref={nameInput}
+                <JoinForm 
+                    idInput={idInput}
+                    pwInput={pwInput}
+                    pwCheckInput={pwCheckInput}
+                    nameInput={nameInput}
+                    handleOnKeyPress={handleOnKeyPress}
                 />
             </div>
-        </div>
+        </Auth>
     )
 };
 

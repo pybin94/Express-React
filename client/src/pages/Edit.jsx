@@ -1,17 +1,19 @@
-import React, { useState, useRef } from 'react';
-import { useEffect } from 'react';
-import MyHeader from "../components/MyHeader"
-import MyButton from "../components/MyButton"
-import EditForm from "../components/Edit/EditForm"
+import React, { useState, useRef, useEffect } from 'react';
+import MyHeader from "../components/MyHeader";
+import MyButton from "../components/MyButton";
+import Auth from "../components/Auth";
+import EditForm from "../components/Edit/EditForm";
 import { useNavigate } from "react-router-dom";
 import useStore from "../utils/Store";
+import { cookies } from "../utils/Cookie";
+import { url } from "../utils/_config";
 import "./Edit.scss";
 
 const Edit = () => {
 
-    const { userId, setUserId, userName, setUserName,  userIndex } = useStore()
+    const { userId, setUserId, userName, setUserName } = useStore();
 
-    const navigate = useNavigate()
+    const navigate = useNavigate();
 
     const idInput = useRef();
     const nameInput = useRef();
@@ -20,24 +22,33 @@ const Edit = () => {
         idInput.current.focus();
     };
 
+    const urlString = window.location.href.split("/");
+    const urlIndex = urlString[urlString.length -1];
+
+    let api = url(`user/${urlIndex}`)
+
     const handelCallApi = async () => {
-        let api = `http://13.215.73.68/user/${userIndex}`
+        let option = {
+            method: "GET",
+            headers: {
+                'authorization': cookies.get("token"),
+            },
+        };
+
         try {
-            const response = await fetch(api)
+            const response = await fetch(api, option);
             const res = await response.json()
             setUserId(res[0].user_id)
             setUserName(res[0].user_name)
         } catch (error) {
-            alert("[Call User Edit Error]\n관리자에게 문의 주세요\n" + error.message)
+            alert("[Call User Edit Error] 관리자에게 문의 주세요\n" + error.message)
         }
-    }
-
-    const handleUpdate = async () => {    
-
+    };
+    
+    const handleUpdate = async () => {
         if(userId == "") { idInput.current.focus(); return alert("아이디를 입력해주세요.") };
         if(userName == "") { nameInput.current.focus(); return alert("이름를 입력해주세요.") };
 
-        let api = `http://13.215.73.68/user/${userIndex}`
         let params = {
             user_id : userId,
             user_name : userName,
@@ -46,7 +57,8 @@ const Edit = () => {
         let option = {
             method: "PUT",
             headers: {
-                'Content-Type': 'application/json;charset=utf-8'
+                'Content-Type': 'application/json;charset=utf-8',
+                'authorization': cookies.get("token"),
             },
             body: JSON.stringify(params)
         };
@@ -82,31 +94,33 @@ const Edit = () => {
 
     useEffect(() => {
         handelCallApi()
-    }, [])
+    }, []);
 
     return (
-        <div className="login">
-            <MyHeader 
-                leftChild={
-                    <MyButton 
-                        text={"뒤로가기"} 
-                        onClick={() => {navigate(-1)}} 
-                    />
-                }
-                rightChild={
-                    <MyButton 
-                        text={"수정하기"} 
-                        onClick={handleUpdate} 
-                    />
-                }
-            />
-            <EditForm 
-                setKeyPress={handleOnKeyPress}
-                idInput={idInput}
-                nameInput={nameInput}
-            />
-        </div>
-    )
+        <Auth>
+            <div className="edit">
+                <MyHeader 
+                    leftChild={
+                        <MyButton 
+                            text={"뒤로가기"} 
+                            onClick={() => {navigate(-1)}} 
+                        />
+                    }
+                    rightChild={
+                        <MyButton 
+                            text={"수정하기"} 
+                            onClick={handleUpdate} 
+                        />
+                    }
+                />
+                <EditForm 
+                    setKeyPress={handleOnKeyPress}
+                    idInput={idInput}
+                    nameInput={nameInput}
+                />
+            </div>
+        </Auth>
+    );
 };
 
 export default Edit;

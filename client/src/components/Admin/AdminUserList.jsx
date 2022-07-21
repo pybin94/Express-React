@@ -1,20 +1,20 @@
 import AdminMadal from "./AdminModal";
 import useStore from "../../utils/Store";
 import { useNavigate } from "react-router-dom";
+import "./AdminUserList.scss";
 
 const AdminUserList = () => {
 
     const navigate = useNavigate();
     const { 
         users, 
-
         setUserIndex ,
         deleteModal,
         setDeleteModal,
     } = useStore()
 
     return (
-        <div>
+        <div className="admin-user-list">
             {users.map((v, i) => (
                 <div key={i} className="flex jcse tac">
                     <div className="w25">{v.user_id}</div>
@@ -22,7 +22,6 @@ const AdminUserList = () => {
                     <div className="w25">{v.join_date}</div>
                     <div className="w25">
                         <button onClick={() => {
-                            setUserIndex(v.id)
                             navigate(`/admin/edit/${v.id}`)
                         }}>
                             수정

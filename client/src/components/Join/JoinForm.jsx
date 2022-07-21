@@ -1,6 +1,9 @@
+import useStore from "../../utils/Store";
 
+const JoinForm = ({ idInput, pwInput, pwCheckInput, nameInput, handleOnKeyPress}) => {
 
-const JoinForm = (userId, idInput, userPw, pwInput, userPwCheck, pwCheckInput, userName, nameInput) => {
+    const { userId, setUserId, userPw,setUserPw, userPwCheck, setUserPwCheck, userName, setUserName,  userIndex } = useStore()
+    
     return (
         <div className="w15 m0-auto">
         id:<input 
@@ -42,3 +45,5 @@ const JoinForm = (userId, idInput, userPw, pwInput, userPwCheck, pwCheckInput, u
     </div>
     )
 }
+
+export default JoinForm;

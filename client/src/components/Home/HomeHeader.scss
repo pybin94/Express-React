@@ -1,0 +1,17 @@
+.home-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    border-bottom: 2px solid #ff7b00;
+    line-height: 50px;
+    font-size: 16px;
+
+    &:first-child {
+        width: 100px;
+    }
+
+    div {
+        width: 100px;
+        text-align: center;
+    }
+}

@@ -1,6 +1,8 @@
 import React, { useState, useRef } from 'react';
+import MyHeader from "../components/MyHeader"
 import useStore from "../utils/Store";
 import { setCookie } from "../utils/Cookie";
+import { url } from "../utils/_config";
 import "./Login.scss";
 
 const Login = () => {
@@ -20,7 +22,7 @@ const Login = () => {
         if(userId == "") return alert("아이디를 입력해주세요.");
         if(userPw == "") return alert("패스워드를 입력해주세요.");
         
-        let api = "http://13.215.73.68/login"
+        let api = url("login")
         let params = {
             user_id : userId,
             user_pw : userPw
@@ -29,7 +31,7 @@ const Login = () => {
         let option = {
             method: "POST",
             headers: {
-                'Content-Type': 'application/json;charset=utf-8'
+                'Content-Type': 'application/json;charset=utf-8',
             },
             body: JSON.stringify(params)
         };
@@ -59,29 +61,32 @@ const Login = () => {
 
     return (
         <div className="login">
-            <input 
-                type="text" 
-                onChange={(e) => {
-                    setUserId(e.target.value)
-                }}
-                onKeyPress={handleOnKeyPress}
-                value={userId}
-                ref={idInput}
-            />
-            <input 
-                type="password" 
-                onChange={(e) => {
-                    setUserPw(e.target.value)
-                }} 
-                onKeyPress={handleOnKeyPress}
-                value={userPw}
-            />
-            <button 
-                type="submit"
-                onClick={handleSubmit}
-            >
-                login
-            </button>
+            <MyHeader />
+            <div className="login-container">
+                <input 
+                    type="text" 
+                    onChange={(e) => {
+                        setUserId(e.target.value)
+                    }}
+                    onKeyPress={handleOnKeyPress}
+                    value={userId}
+                    ref={idInput}
+                />
+                <input 
+                    type="password" 
+                    onChange={(e) => {
+                        setUserPw(e.target.value)
+                    }} 
+                    onKeyPress={handleOnKeyPress}
+                    value={userPw}
+                />
+                <button 
+                    type="submit"
+                    onClick={handleSubmit}
+                >
+                    login
+                </button>
+            </div>
         </div>
     )
 };

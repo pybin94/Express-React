@@ -2,12 +2,10 @@ import useStore from "../../utils/Store";
 
 const EditForm = ({setKeyPress, idInput, nameInput}) => {
 
-    const { userId, setUserId, userName, setUserName,  userIndex } = useStore()
-
-
+    const { userId, setUserId, userName, setUserName } = useStore()
 
     return (
-        <div className="w15 m0-auto">
+        <div className="edit-form w15 m0-auto">
             id:<input 
                 type="text" 
                 onChange={(e) => {

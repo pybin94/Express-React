@@ -12,27 +12,27 @@ const useStore = create(set => ({
 
     userId: "",
     setUserId: (data) => {
-        set((state) => ({ hasCookie: state.userId = data }))
+        set((state) => ({ userId: state.userId = data }))
     },
 
     userPw: "",
     setUserPw: (data) => {
-        set((state) => ({ hasCookie: state.userPw = data }))
+        set((state) => ({ userPw: state.userPw = data }))
     },
 
     userPwCheck: "",
     setUserPwCheck: (data) => {
-        set((state) => ({ hasCookie: state.userPwCheck = data }))
+        set((state) => ({ userPwCheck: state.userPwCheck = data }))
     },
 
     userName: "",
     setUserName: (data) => {
-        set((state) => ({ hasCookie: state.userName = data }))
+        set((state) => ({ userName: state.userName = data }))
     },
 
     userIndex: "",
     setUserIndex: (index) => {
-        set((state) => ({ hasCookie: state.userIndex = index }))
+        set((state) => ({ userIndex: state.userIndex = index }))
     },
 
     hasCookie: false,
@@ -40,12 +40,16 @@ const useStore = create(set => ({
         set((state) => ({ hasCookie: state.hasCookie = boolean }))
     },
 
-    deleteModal: false,
-    setDeleteModal: (boolean) => {
-        set((state) => ({ hasCookie: state.deleteModal = boolean }))
+    userAuth: false,
+    setUserAuth: (boolean) => {
+        set((state) => ({ userAuth: state.userAuth = boolean }))
     },
 
-   
+    deleteModal: false,
+    setDeleteModal: (boolean) => {
+        set((state) => ({ deleteModal: state.deleteModal = boolean }))
+    },
+
 }));
 
 export default useStore;
